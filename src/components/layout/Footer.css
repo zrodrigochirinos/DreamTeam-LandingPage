@@ -1,0 +1,127 @@
+.footer {
+  background-color: var(--color-navy-primary);
+  color: var(--color-white);
+  padding: var(--space-16) 0 var(--space-8);
+  margin-top: auto;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+.footer__heading {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-4);
+  color: var(--color-cyan-primary);
+}
+
+.footer__text {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: var(--space-4);
+  line-height: var(--line-height-relaxed);
+}
+
+.footer__contact {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer__contact a {
+  color: var(--color-white);
+  text-decoration: none;
+  transition: color var(--duration-fast);
+}
+
+.footer__contact a:hover {
+  color: var(--color-cyan-primary);
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer__link-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  padding: 0;
+  text-align: left;
+  transition: color var(--duration-fast), transform var(--duration-fast);
+}
+
+.footer__link-btn:hover {
+  color: var(--color-cyan-primary);
+  transform: translateX(4px);
+}
+
+.footer__social {
+  list-style: none;
+  display: flex;
+  gap: var(--space-3);
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  text-decoration: none;
+  transition:
+    background var(--duration-normal),
+    transform var(--duration-normal);
+}
+
+.footer__social-link:hover {
+  background: var(--color-cyan-primary);
+  transform: translateY(-4px) scale(1.05);
+}
+
+.footer__social-link svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: var(--space-6);
+  text-align: center;
+}
+
+.footer__bottom p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .footer__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: var(--space-12) 0 var(--space-6);
+  }
+}

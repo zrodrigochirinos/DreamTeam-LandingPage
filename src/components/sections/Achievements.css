@@ -1,0 +1,77 @@
+.achievements__stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-16);
+  text-align: center;
+}
+
+.achievements__stat .stat-counter__value {
+  color: var(--color-gold-primary);
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+}
+
+.achievements__stat .stat-counter__label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.achievements__timeline {
+  list-style: none;
+  display: grid;
+  gap: var(--space-6);
+  padding: 0;
+  margin: 0;
+}
+
+.achievements__card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.achievements__card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.achievements__card h3 {
+  color: var(--color-white);
+}
+
+.achievements__card p {
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+.achievements__card-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--color-gold-primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.achievements__date {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gold-primary);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .achievements__stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .achievements__timeline {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+}
